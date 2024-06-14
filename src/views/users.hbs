@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Users</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/users">Personas</a></li>
+      <li><a href="/contact">Contacto</a></li>
+    </ul>
+  </nav>
+  <h1>Lista de Personas</h1>
+  <a href="/users/create" class="centrar">
+    <button class="button-create">Crear nueva persona</button>
+  </a>
+  <table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Apellido</th>
+        <th>Nombre</th>
+        <th>Dirección</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Años</th>
+        <th>Salario</th>
+        <th>RND</th>
+        <th>Estado</th>
+        <th>Sexo</th>
+        <th>Token</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each users}}
+        <tr>
+          <td>{{nPerCode}}</td>
+          <td>{{cPerLastname}}</td>
+          <td>{{cPerName}}</td>
+          <td>{{cPerAddress}}</td>
+          <td>{{formatDate cPerDateBorn}}</td> 
+          <td>{{nPerYears}}</td>
+          <td>{{nPerSalary}}</td>
+          <td>{{cPerRnd}}</td>
+          <td>{{cPerState}}</td>
+          <td>{{cPerSexo}}</td>
+          <td>{{remember_token}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</body>
+</html>
