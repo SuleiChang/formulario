@@ -1,4 +1,4 @@
-# Laboratorio Empresa - Vista de datos de la BD
+# Laboratorio Empresa - Formulario
 
 ## Description
 
