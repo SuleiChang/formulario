@@ -1,13 +1,4 @@
-import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Render,
-  Redirect,
-  BadRequestException,
-  Res,
-} from '@nestjs/common';
+import { Controller, Get, Post, Body, Render, Res } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreatePersonDto } from './dto/create-person.dto';
 import { plainToClass } from 'class-transformer';
@@ -45,6 +36,7 @@ export class UsersController {
       );
       return res.render('create-user', { errors: errorMessages });
     }
+
     // Convertir los tipos de datos antes de enviar a Prisma
     createPersonDto.cPerDateBorn = new Date(createPersonDto.cPerDateBorn);
     createPersonDto.nPerYears = parseInt(
