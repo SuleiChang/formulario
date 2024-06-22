@@ -35,11 +35,11 @@ Creación de la tabla con el ORM Prisma
 
 Vistas de los datos de la BD con la nueva funcionalidad
 
-![image](https://github.com/SuleiChang/formulario/assets/170781882/6ac105ee-4c6e-49b7-9f10-ca9d3b835653)
+![image](https://github.com/SuleiChang/formulario/assets/170781882/c47d72b1-4e4d-4f83-8318-ad32187bf62b)
 
-Formulario para registrar una persona
+Formulario con los datos de la BD para ser editados
 
-![image](https://github.com/SuleiChang/formulario/assets/170781882/21115deb-9011-4481-b36f-db5a3176a26b)
+![image](https://github.com/SuleiChang/formulario/assets/170781882/939b60f3-66ba-440b-be91-7b2f6b088b6a)
 
 
 
