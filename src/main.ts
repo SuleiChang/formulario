@@ -3,7 +3,11 @@ import { AppModule } from './app.module';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 import { engine } from 'express-handlebars';
-import { formatDate } from './helpers/handlebars.helpers';
+import {
+  formatDate,
+  eq,
+  formatDateForInput,
+} from './helpers/handlebars.helpers'; // Import the formatDateForInput helper
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -17,7 +21,9 @@ async function bootstrap() {
       extname: 'hbs',
       defaultLayout: undefined,
       helpers: {
-        formatDate, // Use the formatDate function directly
+        formatDate, // Register the formatDate helper
+        eq, // Register the eq helper
+        formatDateForInput, // Register the formatDateForInput helper
       },
     }),
   );

@@ -3,6 +3,7 @@
 <head>
   <title>Users</title>
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
   <nav>
@@ -30,6 +31,7 @@
         <th>Estado</th>
         <th>Sexo</th>
         <th>Token</th>
+        <th>Operaciones</th>
       </tr>
     </thead>
     <tbody>
@@ -46,6 +48,10 @@
           <td>{{cPerState}}</td>
           <td>{{cPerSexo}}</td>
           <td>{{remember_token}}</td>
+          <td>
+            <a href="/users/edit/{{nPerCode}}" class="button-edit"><i class="fas fa-edit"></i></a>
+            <a href="/users/delete/{{nPerCode}}" class="button-delete"><i class="fas fa-trash"></i></a>
+          </td>
         </tr>
       {{/each}}
     </tbody>
